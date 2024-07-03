@@ -1,4 +1,4 @@
-package com.rifara.absensiacm
+package com.rifara.absensi_acm
 
 import io.flutter.embedding.android.FlutterActivity
 

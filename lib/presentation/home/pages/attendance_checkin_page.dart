@@ -2,13 +2,13 @@ import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_absensi_app/core/ml/recognition_embedding.dart';
-import 'package:flutter_absensi_app/core/ml/recognizer.dart';
-import 'package:flutter_absensi_app/presentation/home/bloc/check_in/check_in_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/attendance_success_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/location_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/main_page.dart';
-import 'package:flutter_absensi_app/presentation/home/widgets/face_detector_painter.dart';
+import 'package:flutter_absensi_app_acm/core/ml/recognition_embedding.dart';
+import 'package:flutter_absensi_app_acm/core/ml/recognizer.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/check_in/check_in_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/attendance_success_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/location_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/main_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/widgets/face_detector_painter.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
 import 'package:image/image.dart' as img;
@@ -224,8 +224,7 @@ class _AttendanceCheckinPageState extends State<AttendanceCheckinPage> {
   void _takeAbsen() async {
     if (mounted) {
       context.read<CheckInBloc>().add(
-            CheckInEvent.checkin(
-                latitude.toString(), longitude.toString()),
+            CheckInEvent.checkin(latitude.toString(), longitude.toString()),
           );
     }
   }
@@ -411,8 +410,7 @@ class _AttendanceCheckinPageState extends State<AttendanceCheckinPage> {
                           icon: Assets.icons.reverse.svg(width: 48.0),
                         ),
                         const Spacer(),
-                        BlocConsumer<CheckInBloc,
-                            CheckInState>(
+                        BlocConsumer<CheckInBloc, CheckInState>(
                           listener: (context, state) {
                             state.maybeWhen(
                               orElse: () {},

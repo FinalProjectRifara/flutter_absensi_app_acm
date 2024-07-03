@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'package:flutter_absensi_app/data/datasources/permisson_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/permisson_remote_datasource.dart';
 
 part 'add_permissions_bloc.freezed.dart';
 part 'add_permissions_event.dart';

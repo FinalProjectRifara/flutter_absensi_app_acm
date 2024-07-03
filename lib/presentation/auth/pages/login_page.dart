@@ -1,10 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/core/core.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_absensi_app/presentation/auth/bloc/login/login_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/main_page.dart';
+import 'package:flutter_absensi_app_acm/core/core.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/bloc/login/login_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/main_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

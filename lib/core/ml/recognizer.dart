@@ -1,10 +1,9 @@
-import 'dart:developer';
 import 'dart:math';
 import 'dart:typed_data';
 import 'dart:ui';
 
-import 'package:flutter_absensi_app/core/ml/recognition_embedding.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/core/ml/recognition_embedding.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:image/image.dart' as img;
 
@@ -96,10 +95,16 @@ class Recognizer {
     return pair;
   }
 
-    Future<bool> isValidFace(List<double> emb) async {
+  Future<bool> isValidFace(List<double> emb) async {
     final authData = await AuthLocalDatasource().getAuthData();
     final faceEmbedding = authData!.user!.faceEmbedding;
-    PairEmbedding pair = findNearest(emb, faceEmbedding!.split(',').map((e) => double.parse(e)).toList().cast<double>());
+    PairEmbedding pair = findNearest(
+        emb,
+        faceEmbedding!
+            .split(',')
+            .map((e) => double.parse(e))
+            .toList()
+            .cast<double>());
     print("distance= ${pair.distance}");
     if (pair.distance < 1.0) {
       return true;
@@ -107,7 +112,6 @@ class Recognizer {
     return false;
   }
 }
-
 
 class PairEmbedding {
   double distance;

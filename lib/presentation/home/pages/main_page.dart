@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/history_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/settings_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/history_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/settings_page.dart';
 
 import '../../../core/core.dart';
 import 'home_page.dart';

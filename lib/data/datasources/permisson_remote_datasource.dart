@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_absensi_app/core/constants/variables.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/core/constants/variables.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 

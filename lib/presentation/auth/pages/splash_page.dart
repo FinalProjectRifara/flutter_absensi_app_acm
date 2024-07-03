@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/core/core.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_absensi_app/presentation/auth/pages/login_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/main_page.dart';
+import 'package:flutter_absensi_app_acm/core/core.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/pages/login_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/main_page.dart';
 
 // import '../../core/core.dart';
 // import '../home/pages/main_page.dart';

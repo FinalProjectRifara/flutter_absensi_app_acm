@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_absensi_app/data/datasources/attendance_remote_datasource.dart';
-import 'package:flutter_absensi_app/data/models/response/attendance_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/attendance_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/attendance_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_attendance_by_date_event.dart';

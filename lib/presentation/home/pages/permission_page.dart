@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_absensi_app/presentation/home/bloc/add_permission/add_permission_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/bloc/add_permissions/add_permissions_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/main_page.dart';
+// import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_permission/add_permission_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_permissions/add_permissions_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/main_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';

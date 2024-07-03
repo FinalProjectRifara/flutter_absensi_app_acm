@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/core/ml/recognition_embedding.dart';
+import 'package:flutter_absensi_app_acm/core/ml/recognition_embedding.dart';
 
 class FaceDetectorPainter extends CustomPainter {
   FaceDetectorPainter(

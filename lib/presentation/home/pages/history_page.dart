@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/presentation/home/bloc/get_attendance_by_date/get_attendance_by_date_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/widgets/history_attendace.dart';
-import 'package:flutter_absensi_app/presentation/home/widgets/history_location.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/get_attendance_by_date/get_attendance_by_date_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/widgets/history_attendace.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/widgets/history_location.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';

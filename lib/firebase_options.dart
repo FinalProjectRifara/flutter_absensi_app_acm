@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB2_HRwfgdndPenwpGSRHKvDNZZ8VwxHhc',
-    appId: '1:114624661178:android:c11f0b8377cd990abfe483',
-    messagingSenderId: '114624661178',
-    projectId: 'hris-5fada',
-    storageBucket: 'hris-5fada.appspot.com',
+    apiKey: 'AIzaSyDGXvW8inzt6Odrt5wlGWWBM4TD3raMWfU',
+    appId: '1:134551444572:android:efd74eb9e4966c96c25a99',
+    messagingSenderId: '134551444572',
+    projectId: 'hris-arif-cipta-mandiri',
+    storageBucket: 'hris-arif-cipta-mandiri.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD3Pa2SC9KgKsJV-B76LY3UtEzpSzpN_hs',
-    appId: '1:114624661178:ios:51329ac4755d76fabfe483',
-    messagingSenderId: '114624661178',
-    projectId: 'hris-5fada',
-    storageBucket: 'hris-5fada.appspot.com',
+    apiKey: 'AIzaSyAsd23kYhqbxFAuhsTUo1GQpOnvUrbirnk',
+    appId: '1:134551444572:ios:621a909ede31a80bc25a99',
+    messagingSenderId: '134551444572',
+    projectId: 'hris-arif-cipta-mandiri',
+    storageBucket: 'hris-arif-cipta-mandiri.appspot.com',
     iosBundleId: 'com.example.flutterAbsensiApp',
   );
 }

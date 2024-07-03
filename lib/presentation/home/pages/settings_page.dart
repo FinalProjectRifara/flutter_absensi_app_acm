@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_absensi_app/core/components/buttons.dart';
-import 'package:flutter_absensi_app/core/core.dart';
-import 'package:flutter_absensi_app/presentation/auth/bloc/logout/logout_bloc.dart';
-import 'package:flutter_absensi_app/presentation/auth/pages/login_page.dart';
+import 'package:flutter_absensi_app_acm/core/components/buttons.dart';
+import 'package:flutter_absensi_app_acm/core/core.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/bloc/logout/logout_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/pages/login_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SettingsPage extends StatefulWidget {

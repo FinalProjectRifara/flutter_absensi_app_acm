@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_absensi_app/core/helper/radius_calculate.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_absensi_app/presentation/home/bloc/get_company/get_company_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/bloc/is_checked_in/is_checked_in_bloc.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/attendance_checkin_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/attendance_checkout_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/permission_page.dart';
+import 'package:flutter_absensi_app_acm/core/helper/radius_calculate.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/get_company/get_company_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/is_checked_in/is_checked_in_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/attendance_checkin_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/attendance_checkout_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/permission_page.dart';
 
-import 'package:flutter_absensi_app/presentation/home/pages/register_face_attendance_page.dart';
-import 'package:flutter_absensi_app/presentation/home/pages/settings_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/register_face_attendance_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/settings_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:location/location.dart';

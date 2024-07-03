@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_remote_datasource.dart';
-import 'package:flutter_absensi_app/data/models/response/user_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/user_response_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

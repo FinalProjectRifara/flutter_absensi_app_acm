@@ -1,6 +1,6 @@
 {
-    "name": "flutter_absensi_app",
-    "short_name": "flutter_absensi_app",
+    "name": "flutter_absensi_app_acm",
+    "short_name": "flutter_absensi_app_acm",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

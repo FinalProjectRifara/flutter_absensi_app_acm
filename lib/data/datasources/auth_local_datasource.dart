@@ -1,5 +1,5 @@
-import 'package:flutter_absensi_app/data/models/response/auth_response_model.dart';
-import 'package:flutter_absensi_app/data/models/response/user_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/auth_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/user_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthLocalDatasource {

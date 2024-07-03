@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_absensi_app/data/models/response/auth_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/auth_response_model.dart';
 
 class UserResponseModel {
   final String? message;

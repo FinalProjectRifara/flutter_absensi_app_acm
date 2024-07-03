@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bloc/bloc.dart';
-import 'package:flutter_absensi_app/data/models/request/checkinout_request_model.dart';
+import 'package:flutter_absensi_app_acm/data/models/request/checkinout_request_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:flutter_absensi_app/data/datasources/attendance_remote_datasource.dart';
-import 'package:flutter_absensi_app/data/models/response/checkinout_response_model.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/attendance_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/models/response/checkinout_response_model.dart';
 
 part 'check_out_bloc.freezed.dart';
 part 'check_out_event.dart';

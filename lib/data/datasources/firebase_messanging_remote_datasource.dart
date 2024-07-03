@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_absensi_app/data/datasources/auth_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_remote_datasource.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class FirebaseMessangingRemoteDatasource {
@@ -58,8 +58,7 @@ class FirebaseMessangingRemoteDatasource {
       title,
       body,
       const NotificationDetails(
-        android: AndroidNotificationDetails(
-            'com.rifara.flutter_absensi_app', 'app',
+        android: AndroidNotificationDetails('com.rifara.absensi_acm', 'app',
             importance: Importance.max),
         iOS: DarwinNotificationDetails(),
       ),

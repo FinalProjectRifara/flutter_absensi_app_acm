@@ -1,6 +1,6 @@
-# flutter_absensi_app
+# flutter_absensi_app_acm
 
-A new Flutter project.
+Aplikasi Absensi Arif Cipta Mandiri
 
 ## Getting Started
 

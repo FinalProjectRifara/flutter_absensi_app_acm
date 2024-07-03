@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "114624661178",
-    "project_id": "hris-5fada",
-    "storage_bucket": "hris-5fada.appspot.com"
+    "project_number": "134551444572",
+    "project_id": "hris-arif-cipta-mandiri",
+    "storage_bucket": "hris-arif-cipta-mandiri.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:114624661178:android:c11f0b8377cd990abfe483",
+        "mobilesdk_app_id": "1:134551444572:android:efd74eb9e4966c96c25a99",
         "android_client_info": {
-          "package_name": "com.rifara.flutter_absensi_app"
+          "package_name": "com.rifara.absensi_acm"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB2_HRwfgdndPenwpGSRHKvDNZZ8VwxHhc"
+          "current_key": "AIzaSyDGXvW8inzt6Odrt5wlGWWBM4TD3raMWfU"
         }
       ],
       "services": {
