@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "114624661178",
+    "project_id": "hris-5fada",
+    "storage_bucket": "hris-5fada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114624661178:android:c11f0b8377cd990abfe483",
+        "android_client_info": {
+          "package_name": "com.rifara.flutter_absensi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2_HRwfgdndPenwpGSRHKvDNZZ8VwxHhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
