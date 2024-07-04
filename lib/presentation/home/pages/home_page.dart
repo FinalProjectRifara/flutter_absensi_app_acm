@@ -115,6 +115,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Row(
                 children: [
+                  // Image
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.network(
@@ -125,6 +126,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SpaceWidth(12.0),
+                  
+                  // Name
                   Expanded(
                     child: FutureBuilder(
                       future: AuthLocalDatasource().getAuthData(),

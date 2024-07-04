@@ -2,6 +2,9 @@ import 'dart:io';
 
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/bloc/login/login_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/bloc/user/user_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_cuti/add_cuti_bloc.dart';
 // import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_permission/add_permission_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_permissions/add_permissions_bloc.dart';
@@ -29,6 +32,7 @@ class CutiPageState extends State<CutiPage> {
   void initState() {
     dateController = TextEditingController();
     reasonController = TextEditingController();
+    context.read<UserBloc>().add(const UserEvent.getUser());
     super.initState();
   }
 
@@ -62,7 +66,32 @@ class CutiPageState extends State<CutiPage> {
       body: ListView(
         padding: const EdgeInsets.all(18.0),
         children: [
-          const Text('Sisa Cuti Anda: 10'),
+          // Cuti
+          BlocBuilder<UserBloc, UserState>(
+            builder: (context, state) {
+              return state.maybeWhen(
+                loaded: (data) {
+                  return Text(
+                    'Sisa Cuti: ${data.cuti ?? '0'} Cuti', // Jika data kosong, tampilkan 0
+                  );
+                },
+                orElse: () {
+                  return const Column(
+                    children: [
+                      Text('Terjadi Error'),
+                    ],
+                  );
+                },
+                loading: () => const Center(
+                  child: CircularProgressIndicator(),
+                ),
+                error: (message) => Center(
+                  child: Text(message),
+                ),
+              );
+            },
+          ),
+
           CustomDatePicker(
             label: 'Tanggal',
             onDateSelected: (selectedDate) =>

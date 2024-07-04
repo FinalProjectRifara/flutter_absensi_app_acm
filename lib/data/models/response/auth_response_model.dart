@@ -39,6 +39,7 @@ class User {
     final int? id;
     final String? name;
     final String? email;
+    final int? cuti;
     final DateTime? emailVerifiedAt;
     final dynamic twoFactorSecret;
     final dynamic twoFactorRecoveryCodes;
@@ -56,6 +57,7 @@ class User {
         this.id,
         this.name,
         this.email,
+        this.cuti,
         this.emailVerifiedAt,
         this.twoFactorSecret,
         this.twoFactorRecoveryCodes,
@@ -78,6 +80,7 @@ class User {
         id: json["id"],
         name: json["name"],
         email: json["email"],
+        cuti: json["cuti"],
         emailVerifiedAt: json["email_verified_at"] == null ? null : DateTime.parse(json["email_verified_at"]),
         twoFactorSecret: json["two_factor_secret"],
         twoFactorRecoveryCodes: json["two_factor_recovery_codes"],
@@ -96,6 +99,7 @@ class User {
         "id": id,
         "name": name,
         "email": email,
+        "cuti": cuti,
         "email_verified_at": emailVerifiedAt?.toIso8601String(),
         "two_factor_secret": twoFactorSecret,
         "two_factor_recovery_codes": twoFactorRecoveryCodes,
