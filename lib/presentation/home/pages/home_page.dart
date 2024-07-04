@@ -7,6 +7,7 @@ import 'package:flutter_absensi_app_acm/presentation/home/bloc/get_company/get_c
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/is_checked_in/is_checked_in_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/pages/attendance_checkin_page.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/pages/attendance_checkout_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/pages/cuti_page.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/pages/permission_page.dart';
 
 import 'package:flutter_absensi_app_acm/presentation/home/pages/register_face_attendance_page.dart';
@@ -114,6 +115,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Row(
                 children: [
+                  // Image
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.network(
@@ -124,6 +126,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SpaceWidth(12.0),
+                  
+                  // Name
                   Expanded(
                     child: FutureBuilder(
                       future: AuthLocalDatasource().getAuthData(),
@@ -391,11 +395,22 @@ class _HomePageState extends State<HomePage> {
                         context.push(const PermissionPage());
                       },
                     ),
+                    // Cuti
                     MenuButton(
-                      label: 'Catatan',
-                      iconPath: Assets.icons.menu.catatan.path,
-                      onPressed: () {},
+                      label: 'Cuti',
+                      iconPath: Assets.icons.menu.izin.path,
+                      onPressed: () {
+                        context.push(
+                          const CutiPage(),
+                        );
+                      },
                     ),
+                    // Catatan
+                    // MenuButton(
+                    //   label: 'Catatan',
+                    //   iconPath: Assets.icons.menu.catatan.path,
+                    //   onPressed: () {},
+                    // ),
                   ],
                 ),
               ),

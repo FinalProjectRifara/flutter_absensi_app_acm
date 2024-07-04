@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_absensi_app_acm/core/constants/colors.dart';
 import 'package:flutter_absensi_app_acm/data/datasources/attendance_remote_datasource.dart';
 import 'package:flutter_absensi_app_acm/data/datasources/auth_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/cuti_remote_datasource.dart';
 import 'package:flutter_absensi_app_acm/data/datasources/firebase_messanging_remote_datasource.dart';
 import 'package:flutter_absensi_app_acm/data/datasources/permisson_remote_datasource.dart';
+import 'package:flutter_absensi_app_acm/data/datasources/user_remote_datasource.dart';
 import 'package:flutter_absensi_app_acm/firebase_options.dart';
 import 'package:flutter_absensi_app_acm/presentation/auth/bloc/login/login_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/auth/bloc/logout/logout_bloc.dart';
+import 'package:flutter_absensi_app_acm/presentation/auth/bloc/user/user_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/auth/pages/splash_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_cuti/add_cuti_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/add_permissions/add_permissions_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/check_in/check_in_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/bloc/check_out/check_out_bloc.dart';
@@ -62,8 +66,14 @@ class MyApp extends StatelessWidget {
           create: (context) => AddPermissionsBloc(PermissonRemoteDatasource()),
         ),
         BlocProvider(
+          create: (context) => AddCutiBloc(CutiRemoteDatasource()),
+        ),
+        BlocProvider(
           create: (context) =>
               GetAttendanceByDateBloc(AttendanceRemoteDatasource()),
+        ),
+        BlocProvider(
+          create: (context) => UserBloc(UserRemoteDatasource()),
         ),
       ],
       child: MaterialApp(
