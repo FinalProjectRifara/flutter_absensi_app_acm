@@ -72,7 +72,8 @@ class _HistoryPageState extends State<HistoryPage> {
                 ),
                 empty: () {
                   return const Center(
-                      child: Text('No attendance data available.'));
+                    child: Text('No attendance data available.'),
+                  );
                 },
                 loaded: (attendance) {
                   // Ambil data pertama dari list (atau ubah logika sesuai kebutuhan Anda)
