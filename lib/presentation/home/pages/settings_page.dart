@@ -20,43 +20,44 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
-      body: Center(
-        child: BlocConsumer<LogoutBloc, LogoutState>(
-          listener: (context, state) {
-            state.maybeWhen(
-              orElse: () {},
-              success: () {
-                context.pushReplacement(const LoginPage());
-              },
-              error: (value) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    backgroundColor: AppColors.red,
-                    content: Text(value),
-                  ),
-                );
-              },
-            );
-          },
-          builder: (context, state) {
-            return state.maybeWhen(
-              orElse: () {
-                return Button.filled(
-                  label: 'Logout',
-                  onPressed: () {
-                    debugPrint('Logout');
-                    context.read<LogoutBloc>().add(const LogoutEvent.logout());
-                  },
-                );
-              },
-              loading: () {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              },
-            );
-          },
-        ),
+      body: const Center(
+        child: Text('Coming Soon'),
+        // BlocConsumer<LogoutBloc, LogoutState>(
+        //   listener: (context, state) {
+        //     state.maybeWhen(
+        //       orElse: () {},
+        //       success: () {
+        //         context.pushReplacement(const LoginPage());
+        //       },
+        //       error: (value) {
+        //         ScaffoldMessenger.of(context).showSnackBar(
+        //           SnackBar(
+        //             backgroundColor: AppColors.red,
+        //             content: Text(value),
+        //           ),
+        //         );
+        //       },
+        //     );
+        //   },
+        //   builder: (context, state) {
+        //     return state.maybeWhen(
+        //       orElse: () {
+        //         return Button.filled(
+        //           label: 'Logout',
+        //           onPressed: () {
+        //             debugPrint('Logout');
+        //             context.read<LogoutBloc>().add(const LogoutEvent.logout());
+        //           },
+        //         );
+        //       },
+        //       loading: () {
+        //         return const Center(
+        //           child: CircularProgressIndicator(),
+        //         );
+        //       },
+        //     );
+        //   },
+        // ),
       ),
     );
   }

@@ -15,6 +15,10 @@ import 'package:vector_graphics/vector_graphics.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/about_app_profil.svg
+  SvgGenImage get aboutAppProfil =>
+      const SvgGenImage('assets/icons/about_app_profil.svg');
+
   /// File path: assets/icons/attendance.svg
   SvgGenImage get attendance =>
       const SvgGenImage('assets/icons/attendance.svg');
@@ -25,14 +29,24 @@ class $AssetsIconsGen {
   /// File path: assets/icons/calendar.svg
   SvgGenImage get calendar => const SvgGenImage('assets/icons/calendar.svg');
 
+  /// File path: assets/icons/contact_us_profil.svg
+  SvgGenImage get contactUsProfil =>
+      const SvgGenImage('assets/icons/contact_us_profil.svg');
+
   /// File path: assets/icons/email.svg
   SvgGenImage get email => const SvgGenImage('assets/icons/email.svg');
+
+  /// File path: assets/icons/email_icon.svg
+  SvgGenImage get emailIcon => const SvgGenImage('assets/icons/email_icon.svg');
 
   /// File path: assets/icons/image.svg
   SvgGenImage get image => const SvgGenImage('assets/icons/image.svg');
 
   /// File path: assets/icons/location.svg
   SvgGenImage get location => const SvgGenImage('assets/icons/location.svg');
+
+  /// File path: assets/icons/logo_acm.svg
+  SvgGenImage get logoAcm => const SvgGenImage('assets/icons/logo_acm.svg');
 
   /// Directory path: assets/icons/menu
   $AssetsIconsMenuGen get menu => const $AssetsIconsMenuGen();
@@ -44,22 +58,36 @@ class $AssetsIconsGen {
   SvgGenImage get notificationRounded =>
       const SvgGenImage('assets/icons/notification_rounded.svg');
 
+  /// File path: assets/icons/order_profil.svg
+  SvgGenImage get orderProfil =>
+      const SvgGenImage('assets/icons/order_profil.svg');
+
   /// File path: assets/icons/password.svg
   SvgGenImage get password => const SvgGenImage('assets/icons/password.svg');
+
+  /// File path: assets/icons/profile_profil.svg
+  SvgGenImage get profileProfil =>
+      const SvgGenImage('assets/icons/profile_profil.svg');
 
   /// File path: assets/icons/reverse.svg
   SvgGenImage get reverse => const SvgGenImage('assets/icons/reverse.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        aboutAppProfil,
         attendance,
         back,
         calendar,
+        contactUsProfil,
         email,
+        emailIcon,
         image,
         location,
+        logoAcm,
         notificationRounded,
+        orderProfil,
         password,
+        profileProfil,
         reverse
       ];
 }
@@ -80,6 +108,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
+  /// File path: assets/images/logo_acm2.png
+  AssetGenImage get logoAcm2 =>
+      const AssetGenImage('assets/images/logo_acm2.png');
+
   /// File path: assets/images/logo_code_with_bahri.png
   AssetGenImage get logoCodeWithBahri =>
       const AssetGenImage('assets/images/logo_code_with_bahri.png');
@@ -87,6 +119,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo_white.png
   AssetGenImage get logoWhite =>
       const AssetGenImage('assets/images/logo_white.png');
+
+  /// File path: assets/images/logoacm.png
+  AssetGenImage get logoacm => const AssetGenImage('assets/images/logoacm.png');
 
   /// File path: assets/images/see_location.png
   AssetGenImage get seeLocation =>
@@ -101,8 +136,10 @@ class $AssetsImagesGen {
         failed,
         imgMyLocation,
         logo,
+        logoAcm2,
         logoCodeWithBahri,
         logoWhite,
+        logoacm,
         seeLocation,
         success
       ];

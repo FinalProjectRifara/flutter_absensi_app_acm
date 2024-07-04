@@ -4,10 +4,6 @@ import 'package:flutter_absensi_app_acm/data/datasources/auth_local_datasource.d
 import 'package:flutter_absensi_app_acm/presentation/auth/pages/login_page.dart';
 import 'package:flutter_absensi_app_acm/presentation/home/pages/main_page.dart';
 
-// import '../../core/core.dart';
-// import '../home/pages/main_page.dart';
-// import 'login_page.dart';
-
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
 
@@ -18,7 +14,7 @@ class SplashPage extends StatelessWidget {
       () => context.pushReplacement(const LoginPage()),
     );
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.white,
       body: FutureBuilder(
         future: AuthLocalDatasource().isAuth(),
         builder: (context, snapshot) {
@@ -29,7 +25,7 @@ class SplashPage extends StatelessWidget {
                   const Spacer(),
                   Padding(
                     padding: const EdgeInsets.all(50.0),
-                    child: Assets.images.logoWhite.image(),
+                    child: Assets.images.logo.image(),
                   ),
                   const Spacer(),
                   Assets.images.logoCodeWithBahri.image(height: 70),
@@ -56,10 +52,10 @@ class SplashPage extends StatelessWidget {
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.all(50.0),
-                child: Assets.images.logoWhite.image(),
+                child: Assets.images.logoAcm2.image(),
               ),
               const Spacer(),
-              Assets.images.logoCodeWithBahri.image(height: 70),
+              // Assets.images.logoCodeWithBahri.image(height: 70),
               const SpaceHeight(20.0),
             ],
           );
