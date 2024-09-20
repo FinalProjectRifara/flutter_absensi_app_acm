@@ -2,6 +2,8 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_absensi_app_acm/presentation/account/pages/about_app_page.dart';
 import 'package:flutter_absensi_app_acm/presentation/account/pages/contact_us_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/account/pages/profile_page.dart';
+import 'package:flutter_absensi_app_acm/presentation/account/pages/settings_page.dart';
 import 'package:flutter_absensi_app_acm/presentation/account/widgets/list_profile.dart';
 import 'package:flutter_absensi_app_acm/presentation/auth/bloc/logout/logout_bloc.dart';
 import 'package:flutter_absensi_app_acm/presentation/auth/bloc/user/user_bloc.dart';
@@ -44,14 +46,13 @@ class _AccountPageState extends State<AccountPage> {
             children: [
               // Photo Profile
               ClipRRect(
-                borderRadius: BorderRadius.circular(50.0),
-                child: Image.network(
-                  'https://i.pinimg.com/originals/1b/14/53/1b14536a5f7e70664550df4ccaa5b231.jpg',
-                  width: 100.0,
-                  height: 100.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  borderRadius: BorderRadius.circular(50.0),
+                  child: Image.asset(
+                    Assets.images.logoAcm2.path,
+                    width: 100.0,
+                    height: 100.0,
+                    fit: BoxFit.cover,
+                  )),
 
               const SpaceHeight(12),
 
@@ -101,6 +102,7 @@ class _AccountPageState extends State<AccountPage> {
             title: 'Profil',
             subTitle: 'Atur dan lihat data Anda.',
             onTap: () {
+              context.push(const ProfilePage());
               // context.goNamed(
               //   RouteConstants.profile,
               //   pathParameters: PathParameters(
@@ -120,7 +122,7 @@ class _AccountPageState extends State<AccountPage> {
             title: 'Hubungi Kami',
             subTitle: 'Sampaikan kendala, kritik, dan saran Anda.',
             onTap: () {
-              context.push(ContactUsPage());
+              context.push(const ContactUsPage());
               // context.goNamed(
               //   RouteConstants.contactUs,
               //   pathParameters: PathParameters(
@@ -138,7 +140,7 @@ class _AccountPageState extends State<AccountPage> {
             title: 'Tentang Aplikasi',
             subTitle: 'Lihat informasi lengkap tentang aplikasi.',
             onTap: () {
-              context.push(AboutAppPage());
+              context.push(const AboutAppPage());
               // context.goNamed(
               //   RouteConstants.aboutApp,
               //   pathParameters: PathParameters(
@@ -151,19 +153,20 @@ class _AccountPageState extends State<AccountPage> {
           const SpaceHeight(4),
 
           // Pengaturan
-          // ListProfile(
-          //   image: Assets.icons.settingsProfil,
-          //   title: 'Pengaturan',
-          //   subTitle: 'Pengaturan tentang aplikasi.',
-          //   onTap: () {
-          //     context.goNamed(
-          //       RouteConstants.settings,
-          //       pathParameters: PathParameters(
-          //         rootTab: RootTab.account,
-          //       ).toMap(),
-          //     );
-          //   },
-          // ),
+          ListProfile(
+            image: Assets.icons.settingsProfil,
+            title: 'Pengaturan',
+            subTitle: 'Pengaturan tentang aplikasi.',
+            onTap: () {
+              context.push(const SettingsPage());
+              // context.goNamed(
+              //   RouteConstants.settings,
+              //   pathParameters: PathParameters(
+              //     rootTab: RootTab.account,
+              //   ).toMap(),
+              // );
+            },
+          ),
 
           const SpaceHeight(40),
 

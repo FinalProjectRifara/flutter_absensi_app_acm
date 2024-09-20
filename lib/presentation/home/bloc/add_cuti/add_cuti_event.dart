@@ -6,6 +6,6 @@ class AddCutiEvent with _$AddCutiEvent {
     const factory AddCutiEvent.addPermission({
     required String date,
     required String reason,
-    required XFile? image,
+    // required XFile? image,
   }) = _AddCuti;
 }

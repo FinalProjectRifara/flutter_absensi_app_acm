@@ -466,7 +466,7 @@ mixin _$UserState {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) =>
       throw _privateConstructorUsedError;
@@ -476,7 +476,7 @@ mixin _$UserState {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -485,7 +485,7 @@ mixin _$UserState {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -578,7 +578,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) {
     return initial();
@@ -591,7 +591,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) {
     return initial?.call();
   }
@@ -603,7 +603,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -699,7 +699,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) {
     return loading();
@@ -712,7 +712,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) {
     return loading?.call();
   }
@@ -724,7 +724,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -847,7 +847,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) {
     return loaded(userApiResponseModel);
@@ -860,7 +860,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) {
     return loaded?.call(userApiResponseModel);
   }
@@ -872,7 +872,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -1000,7 +1000,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) {
     return error(message);
@@ -1013,7 +1013,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) {
     return error?.call(message);
   }
@@ -1025,7 +1025,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1090,7 +1090,7 @@ abstract class _$$UpdatedImplCopyWith<$Res> {
           _$UpdatedImpl value, $Res Function(_$UpdatedImpl) then) =
       __$$UpdatedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserApiResponseModel updateUserResponseModel});
+  $Res call({UpdateUserResponseModel updateUserResponseModel});
 }
 
 /// @nodoc
@@ -1110,7 +1110,7 @@ class __$$UpdatedImplCopyWithImpl<$Res>
       null == updateUserResponseModel
           ? _value.updateUserResponseModel
           : updateUserResponseModel // ignore: cast_nullable_to_non_nullable
-              as UserApiResponseModel,
+              as UpdateUserResponseModel,
     ));
   }
 }
@@ -1121,7 +1121,7 @@ class _$UpdatedImpl implements _Updated {
   const _$UpdatedImpl(this.updateUserResponseModel);
 
   @override
-  final UserApiResponseModel updateUserResponseModel;
+  final UpdateUserResponseModel updateUserResponseModel;
 
   @override
   String toString() {
@@ -1154,7 +1154,7 @@ class _$UpdatedImpl implements _Updated {
     required TResult Function() loading,
     required TResult Function(UserApiResponseModel userApiResponseModel) loaded,
     required TResult Function(String message) error,
-    required TResult Function(UserApiResponseModel updateUserResponseModel)
+    required TResult Function(UpdateUserResponseModel updateUserResponseModel)
         updated,
   }) {
     return updated(updateUserResponseModel);
@@ -1167,7 +1167,7 @@ class _$UpdatedImpl implements _Updated {
     TResult? Function()? loading,
     TResult? Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult? Function(String message)? error,
-    TResult? Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult? Function(UpdateUserResponseModel updateUserResponseModel)? updated,
   }) {
     return updated?.call(updateUserResponseModel);
   }
@@ -1179,7 +1179,7 @@ class _$UpdatedImpl implements _Updated {
     TResult Function()? loading,
     TResult Function(UserApiResponseModel userApiResponseModel)? loaded,
     TResult Function(String message)? error,
-    TResult Function(UserApiResponseModel updateUserResponseModel)? updated,
+    TResult Function(UpdateUserResponseModel updateUserResponseModel)? updated,
     required TResult orElse(),
   }) {
     if (updated != null) {
@@ -1230,10 +1230,10 @@ class _$UpdatedImpl implements _Updated {
 }
 
 abstract class _Updated implements UserState {
-  const factory _Updated(final UserApiResponseModel updateUserResponseModel) =
-      _$UpdatedImpl;
+  const factory _Updated(
+      final UpdateUserResponseModel updateUserResponseModel) = _$UpdatedImpl;
 
-  UserApiResponseModel get updateUserResponseModel;
+  UpdateUserResponseModel get updateUserResponseModel;
   @JsonKey(ignore: true)
   _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
       throw _privateConstructorUsedError;

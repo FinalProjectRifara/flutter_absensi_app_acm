@@ -19,20 +19,19 @@ mixin _$AddCutiEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String date, String reason, XFile? image)
-        addPermission,
+    required TResult Function(String date, String reason) addPermission,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String date, String reason, XFile? image)? addPermission,
+    TResult? Function(String date, String reason)? addPermission,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String date, String reason, XFile? image)? addPermission,
+    TResult Function(String date, String reason)? addPermission,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,8 +113,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String date, String reason, XFile? image)
-        addPermission,
+    required TResult Function(String date, String reason) addPermission,
   }) {
     return started();
   }
@@ -124,7 +122,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String date, String reason, XFile? image)? addPermission,
+    TResult? Function(String date, String reason)? addPermission,
   }) {
     return started?.call();
   }
@@ -133,7 +131,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String date, String reason, XFile? image)? addPermission,
+    TResult Function(String date, String reason)? addPermission,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -184,7 +182,7 @@ abstract class _$$AddCutiImplCopyWith<$Res> {
           _$AddCutiImpl value, $Res Function(_$AddCutiImpl) then) =
       __$$AddCutiImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String date, String reason, XFile? image});
+  $Res call({String date, String reason});
 }
 
 /// @nodoc
@@ -200,7 +198,6 @@ class __$$AddCutiImplCopyWithImpl<$Res>
   $Res call({
     Object? date = null,
     Object? reason = null,
-    Object? image = freezed,
   }) {
     return _then(_$AddCutiImpl(
       date: null == date
@@ -211,10 +208,6 @@ class __$$AddCutiImplCopyWithImpl<$Res>
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      image: freezed == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as XFile?,
     ));
   }
 }
@@ -222,19 +215,16 @@ class __$$AddCutiImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AddCutiImpl implements _AddCuti {
-  const _$AddCutiImpl(
-      {required this.date, required this.reason, required this.image});
+  const _$AddCutiImpl({required this.date, required this.reason});
 
   @override
   final String date;
   @override
   final String reason;
-  @override
-  final XFile? image;
 
   @override
   String toString() {
-    return 'AddCutiEvent.addPermission(date: $date, reason: $reason, image: $image)';
+    return 'AddCutiEvent.addPermission(date: $date, reason: $reason)';
   }
 
   @override
@@ -243,12 +233,11 @@ class _$AddCutiImpl implements _AddCuti {
         (other.runtimeType == runtimeType &&
             other is _$AddCutiImpl &&
             (identical(other.date, date) || other.date == date) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.image, image) || other.image == image));
+            (identical(other.reason, reason) || other.reason == reason));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, date, reason, image);
+  int get hashCode => Object.hash(runtimeType, date, reason);
 
   @JsonKey(ignore: true)
   @override
@@ -260,30 +249,29 @@ class _$AddCutiImpl implements _AddCuti {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String date, String reason, XFile? image)
-        addPermission,
+    required TResult Function(String date, String reason) addPermission,
   }) {
-    return addPermission(date, reason, image);
+    return addPermission(date, reason);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String date, String reason, XFile? image)? addPermission,
+    TResult? Function(String date, String reason)? addPermission,
   }) {
-    return addPermission?.call(date, reason, image);
+    return addPermission?.call(date, reason);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String date, String reason, XFile? image)? addPermission,
+    TResult Function(String date, String reason)? addPermission,
     required TResult orElse(),
   }) {
     if (addPermission != null) {
-      return addPermission(date, reason, image);
+      return addPermission(date, reason);
     }
     return orElse();
   }
@@ -323,12 +311,10 @@ class _$AddCutiImpl implements _AddCuti {
 abstract class _AddCuti implements AddCutiEvent {
   const factory _AddCuti(
       {required final String date,
-      required final String reason,
-      required final XFile? image}) = _$AddCutiImpl;
+      required final String reason}) = _$AddCutiImpl;
 
   String get date;
   String get reason;
-  XFile? get image;
   @JsonKey(ignore: true)
   _$$AddCutiImplCopyWith<_$AddCutiImpl> get copyWith =>
       throw _privateConstructorUsedError;

@@ -50,4 +50,11 @@ class AuthLocalDatasource {
       return false;
     }
   }
+
+  // Get User ID
+  Future<String?> getUserId() async {
+    final authData = await getAuthData();
+    return authData?.user?.id
+        .toString(); // Asumsikan userId disimpan di authData
+  }
 }

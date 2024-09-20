@@ -6,7 +6,10 @@ import 'package:image_picker/image_picker.dart';
 
 class CutiRemoteDatasource {
   Future<Either<String, String>> addCuti(
-      String date, String reason, XFile? image) async {
+    String date,
+    String reason,
+    // XFile? image,
+  ) async {
     final authData = await AuthLocalDatasource().getAuthData();
     final url = Uri.parse('${Variables.baseUrl}/api/api-cuti');
     final headers = {
@@ -19,7 +22,8 @@ class CutiRemoteDatasource {
     request.headers.addAll(headers);
     request.fields['date'] = date;
     request.fields['reason'] = reason;
-    request.files.add(await http.MultipartFile.fromPath('image', image!.path));
+
+    // request.files.add(await http.MultipartFile.fromPath('image', image!.path));
 
     http.StreamedResponse response = await request.send();
 

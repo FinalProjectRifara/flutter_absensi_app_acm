@@ -4,7 +4,7 @@ class UserApiResponseModel {
   final int? id;
   final String? name;
   final String? email;
-  final int? cuti;
+  final String? cuti;
   final DateTime? emailVerifiedAt;
   final dynamic twoFactorSecret;
   final dynamic twoFactorRecoveryCodes;

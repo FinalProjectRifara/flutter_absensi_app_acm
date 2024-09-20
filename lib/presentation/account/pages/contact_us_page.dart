@@ -44,7 +44,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
               child: Card(
                 child: ListTile(
                   title: const Text(
-                    '0895 4128 92094',
+                    '0857-7053-8891',
                     // style: fontQuicksand.copyWith(
                     //   fontSize: fontMedium,
                     // ),
@@ -78,7 +78,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
               child: Card(
                 child: ListTile(
                   title: const Text(
-                    'rizkyfaisalrafi123@gmail.com',
+                    'salsabilah05102002@gmail.com',
                     // style: fontQuicksand.copyWith(
                     //   fontSize: fontMedium,
                     // ),
@@ -103,9 +103,11 @@ class _ContactUsPageState extends State<ContactUsPage> {
     );
   }
 
+  // +62 857-7053-8891
+
   // Function launch WA
   void launchWhatsApp() async {
-    String url = "wa.me/62895412892094";
+    String url = "wa.me/6285770538891";
     final Uri whatsappUrl = Uri(scheme: 'https', path: url);
 
     if (await canLaunchUrl(whatsappUrl)) {
@@ -117,7 +119,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
 
   // Function launch PhoneNumber
   void launchPhone() async {
-    final Uri url = Uri(scheme: 'tel', path: "0895412892094");
+    final Uri url = Uri(scheme: 'tel', path: "085770538891");
 
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
@@ -137,7 +139,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
 
     final Uri emailUri = Uri(
       scheme: 'mailto',
-      path: 'rizkyfaisalrafi123@gmail.com',
+      path: 'salsabilah05102002@gmail.com',
       query: encodeQueryParameters(<String, String>{
         'subject': 'Send your Subject',
         'body': 'Your Description',

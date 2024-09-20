@@ -117,16 +117,22 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   // Image
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(50.0),
-                    child: Image.network(
-                      'https://i.pinimg.com/originals/1b/14/53/1b14536a5f7e70664550df4ccaa5b231.jpg',
-                      width: 48.0,
-                      height: 48.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                      borderRadius: BorderRadius.circular(50.0),
+                      child: Image.asset(
+                        Assets.images.logoAcm2.path,
+                        width: 48.0,
+                        height: 48.0,
+                        fit: BoxFit.cover,
+                      )
+                      // Image.network(
+                      //   'https://i.pinimg.com/originals/1b/14/53/1b14536a5f7e70664550df4ccaa5b231.jpg',
+                      //   width: 48.0,
+                      //   height: 48.0,
+                      //   fit: BoxFit.cover,
+                      // ),
+                      ),
                   const SpaceWidth(12.0),
-                  
+
                   // Name
                   Expanded(
                     child: FutureBuilder(
@@ -138,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                         } else {
                           final user = snapshot.data?.user;
                           return Text(
-                            'Hello, ${user?.name ?? 'Hello, Chopper Sensei'}',
+                            'Hello, ${user?.name ?? 'Hello, Anda belum Login'}',
                             style: const TextStyle(
                               fontSize: 18.0,
                               color: AppColors.white,
@@ -172,6 +178,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Column(
                   children: [
+                    // Time
                     Text(
                       DateTime.now().toFormattedTime(),
                       style: const TextStyle(
@@ -180,6 +187,8 @@ class _HomePageState extends State<HomePage> {
                         color: AppColors.primary,
                       ),
                     ),
+
+                    // Date
                     Text(
                       DateTime.now().toFormattedDate(),
                       style: const TextStyle(
@@ -187,9 +196,12 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 12.0,
                       ),
                     ),
+
                     const SpaceHeight(18.0),
                     const Divider(),
                     const SpaceHeight(30.0),
+
+                    // Date
                     Text(
                       DateTime.now().toFormattedDate(),
                       style: const TextStyle(
@@ -197,7 +209,10 @@ class _HomePageState extends State<HomePage> {
                         color: AppColors.grey,
                       ),
                     ),
+
                     const SpaceHeight(6.0),
+
+                    // Time In Time Out Work
                     Text(
                       '${DateTime(2024, 3, 14, 8, 0).toFormattedTime()} - ${DateTime(2024, 3, 14, 16, 0).toFormattedTime()}',
                       style: const TextStyle(
@@ -209,6 +224,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SpaceHeight(80.0),
+
+              // MENU
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: GridView(
@@ -388,13 +405,13 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     // Izin
-                    MenuButton(
-                      label: 'Izin',
-                      iconPath: Assets.icons.menu.izin.path,
-                      onPressed: () {
-                        context.push(const PermissionPage());
-                      },
-                    ),
+                    // MenuButton(
+                    //   label: 'Izin',
+                    //   iconPath: Assets.icons.menu.izin.path,
+                    //   onPressed: () {
+                    //     context.push(const PermissionPage());
+                    //   },
+                    // ),
                     // Cuti
                     MenuButton(
                       label: 'Cuti',

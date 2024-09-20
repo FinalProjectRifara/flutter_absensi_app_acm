@@ -45,9 +45,9 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const SpaceHeight(50),
               Image.asset(
-                Assets.images.logo.path,
+                Assets.images.logoacm.path,
                 width: MediaQuery.of(context).size.width,
-                height: 100,
+                // height: 100,
               ),
               const SpaceHeight(107),
 

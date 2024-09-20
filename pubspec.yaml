@@ -67,6 +67,7 @@ dependencies:
   calendar_timeline_sbk: ^1.1.7
   awesome_dialog: ^3.2.1
   url_launcher: ^6.3.0
+  connectivity_plus: ^6.0.3
 
 
 

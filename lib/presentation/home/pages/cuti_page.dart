@@ -104,42 +104,45 @@ class CutiPageState extends State<CutiPage> {
             maxLines: 5,
           ),
           const SpaceHeight(26.0),
-          Padding(
-            padding: EdgeInsets.only(right: context.deviceWidth / 2),
-            child: GestureDetector(
-              onTap: _pickImage,
-              child: imagePath == null
-                  ? DottedBorder(
-                      borderType: BorderType.RRect,
-                      color: Colors.grey,
-                      radius: const Radius.circular(18.0),
-                      dashPattern: const [8, 4],
-                      child: Center(
-                        child: SizedBox(
-                          height: 120.0,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Assets.icons.image.svg(),
-                              const SpaceHeight(18.0),
-                              const Text('Lampiran'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    )
-                  : ClipRRect(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(18.0),
-                      ),
-                      child: Image.file(
-                        File(imagePath!),
-                        height: 120.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-            ),
-          ),
+
+          // Lampiran
+          // Padding(
+          //   padding: EdgeInsets.only(right: context.deviceWidth / 2),
+          //   child: GestureDetector(
+          //     onTap: _pickImage,
+          //     child: imagePath == null
+          //         ? DottedBorder(
+          //             borderType: BorderType.RRect,
+          //             color: Colors.grey,
+          //             radius: const Radius.circular(18.0),
+          //             dashPattern: const [8, 4],
+          //             child: Center(
+          //               child: SizedBox(
+          //                 height: 120.0,
+          //                 child: Column(
+          //                   mainAxisAlignment: MainAxisAlignment.center,
+          //                   children: [
+          //                     Assets.icons.image.svg(),
+          //                     const SpaceHeight(18.0),
+          //                     const Text('Lampiran'),
+          //                   ],
+          //                 ),
+          //               ),
+          //             ),
+          //           )
+          //         : ClipRRect(
+          //             borderRadius: const BorderRadius.all(
+          //               Radius.circular(18.0),
+          //             ),
+          //             child: Image.file(
+          //               File(imagePath!),
+          //               height: 120.0,
+          //               fit: BoxFit.cover,
+          //             ),
+          //           ),
+          //   ),
+          // ),
+
           const SpaceHeight(65.0),
 
           // Button Kirim Permintaan
@@ -180,9 +183,10 @@ class CutiPageState extends State<CutiPage> {
                           imagePath != null ? XFile(imagePath!) : null;
                       context.read<AddCutiBloc>().add(
                             AddCutiEvent.addPermission(
-                                date: dateController.text,
-                                reason: reasonController.text,
-                                image: image!),
+                              date: dateController.text,
+                              reason: reasonController.text,
+                              // image: image!,
+                            ),
                           );
                     },
                     label: 'Kirim Permintaan Cuti',

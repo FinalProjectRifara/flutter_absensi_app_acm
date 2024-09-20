@@ -19,7 +19,7 @@ class AddCutiBloc extends Bloc<AddCutiEvent, AddCutiState> {
       final result = await datasource.addCuti(
         event.date,
         event.reason,
-        event.image,
+        // event.image,
       );
       result.fold(
         (l) => emit(_Error(l)),

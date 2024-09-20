@@ -29,6 +29,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/calendar.svg
   SvgGenImage get calendar => const SvgGenImage('assets/icons/calendar.svg');
 
+  /// File path: assets/icons/choose_language_setting.svg
+  SvgGenImage get chooseLanguageSetting =>
+      const SvgGenImage('assets/icons/choose_language_setting.svg');
+
   /// File path: assets/icons/contact_us_profil.svg
   SvgGenImage get contactUsProfil =>
       const SvgGenImage('assets/icons/contact_us_profil.svg');
@@ -72,12 +76,21 @@ class $AssetsIconsGen {
   /// File path: assets/icons/reverse.svg
   SvgGenImage get reverse => const SvgGenImage('assets/icons/reverse.svg');
 
+  /// File path: assets/icons/settings_profil.svg
+  SvgGenImage get settingsProfil =>
+      const SvgGenImage('assets/icons/settings_profil.svg');
+
+  /// File path: assets/icons/theme_app_setting.svg
+  SvgGenImage get themeAppSetting =>
+      const SvgGenImage('assets/icons/theme_app_setting.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         aboutAppProfil,
         attendance,
         back,
         calendar,
+        chooseLanguageSetting,
         contactUsProfil,
         email,
         emailIcon,
@@ -88,7 +101,9 @@ class $AssetsIconsGen {
         orderProfil,
         password,
         profileProfil,
-        reverse
+        reverse,
+        settingsProfil,
+        themeAppSetting
       ];
 }
 
@@ -123,6 +138,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/logoacm.png
   AssetGenImage get logoacm => const AssetGenImage('assets/images/logoacm.png');
 
+  /// File path: assets/images/photo_profile.jpg
+  AssetGenImage get photoProfile =>
+      const AssetGenImage('assets/images/photo_profile.jpg');
+
   /// File path: assets/images/see_location.png
   AssetGenImage get seeLocation =>
       const AssetGenImage('assets/images/see_location.png');
@@ -140,6 +159,7 @@ class $AssetsImagesGen {
         logoCodeWithBahri,
         logoWhite,
         logoacm,
+        photoProfile,
         seeLocation,
         success
       ];

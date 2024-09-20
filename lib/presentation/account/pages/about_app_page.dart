@@ -73,7 +73,7 @@ class _AboutAppScreenState extends State<AboutAppPage> {
 
                   // Description App
                   Text(
-                    'Anugrah Hadi Electric merupakan Perusahaan General Supplier Electrical di Tangerang. Aplikasi ini merupakan versi 1.0 yang dimana fitur didalam sistem ini masih tahap pengembangan untuk perbaikan kedepannya demi membantu konsumen dalam mendapatkan produk yang dicari dan melayani permintaan konsumen dengan hati, cepat dan amanah.',
+                    'Arif Cipta Mandiri merupakan Perusahaan dibidang restoran A Fung Baso Sapi Asli yang memiliki banyak outlet di Indonesia. Aplikasi ini merupakan versi 1.0 yang dimana fitur didalam sistem ini masih tahap pengembangan untuk perbaikan kedepannya demi membantu pegawai dalam melakukan absensi, cuti dan lain sebagainya.',
                     // style: fontQuicksand.copyWith(
                     //   fontWeight: reguler,
                     //   fontSize: fontMedium,

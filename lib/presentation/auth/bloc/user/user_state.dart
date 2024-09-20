@@ -8,6 +8,6 @@ class UserState with _$UserState {
       _Loaded;
   const factory UserState.error(String message) = _Error;
   const factory UserState.updated(
-          UserApiResponseModel updateUserResponseModel) =
+          UpdateUserResponseModel updateUserResponseModel) =
       _Updated; // Tambahkan state updated
 }

@@ -23,36 +23,51 @@ class FirebaseMessangingRemoteDatasource {
         requestSoundPermission: true,
         onDidReceiveLocalNotification:
             (int id, String? title, String? body, String? payload) async {
-          // showNotification(id: id, title: title, body: body, payLoad: payload);
+          // Implementasi jika ada
         });
 
     final initializationSettings = InitializationSettings(
         android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
+
     await flutterLocalNotificationsPlugin.initialize(initializationSettings,
         onDidReceiveNotificationResponse:
-            (NotificationResponse notificationResponse) async {});
+            (NotificationResponse notificationResponse) async {
+      // Implementasi jika diperlukan
+    });
 
     final fcmToken = await _firebaseMessaging.getToken();
 
     print('FCM Token: $fcmToken');
 
-    if (await AuthLocalDatasource().getAuthData() != null) {
-      AuthRemoteDatasource().updateFcmToken(fcmToken!);
+    if (fcmToken != null && await AuthLocalDatasource().getAuthData() != null) {
+      AuthRemoteDatasource().updateFcmToken(fcmToken);
     }
 
     FirebaseMessaging.instance.getInitialMessage();
+
     FirebaseMessaging.onMessage.listen((message) {
       print(message.notification?.body);
       print(message.notification?.title);
     });
 
     FirebaseMessaging.onMessage.listen(firebaseBackgroundHandler);
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+    // Cek apakah _firebaseMessagingBackgroundHandler tidak null
+    if (_firebaseMessagingBackgroundHandler != null) {
+      // Daftarkan background handler hanya jika ada dan telah diinisialisasi dengan benar
+      FirebaseMessaging.onBackgroundMessage(
+          _firebaseMessagingBackgroundHandler);
+    }
+
     FirebaseMessaging.onMessageOpenedApp.listen(firebaseBackgroundHandler);
   }
 
-  Future showNotification(
-      {int id = 0, String? title, String? body, String? payLoad}) async {
+  Future<void> showNotification({
+    int id = 0,
+    String? title,
+    String? body,
+    String? payLoad,
+  }) async {
     return flutterLocalNotificationsPlugin.show(
       id,
       title,
@@ -68,15 +83,19 @@ class FirebaseMessangingRemoteDatasource {
   @pragma('vm:entry-point')
   Future<void> _firebaseMessagingBackgroundHandler(
       RemoteMessage message) async {
+    // Inisialisasi Firebase jika belum diinisialisasi
     await Firebase.initializeApp();
 
+    // Panggil handler untuk menampilkan notifikasi
     FirebaseMessangingRemoteDatasource().firebaseBackgroundHandler(message);
   }
 
   Future<void> firebaseBackgroundHandler(RemoteMessage message) async {
-    showNotification(
-      title: message.notification!.title,
-      body: message.notification!.body,
-    );
+    if (message.notification != null) {
+      await showNotification(
+        title: message.notification!.title,
+        body: message.notification!.body,
+      );
+    }
   }
 }
