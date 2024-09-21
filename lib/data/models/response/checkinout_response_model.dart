@@ -57,8 +57,16 @@ class Attendance {
   String toJson() => json.encode(toMap());
 
   factory Attendance.fromMap(Map<String, dynamic> json) => Attendance(
-        id: json["id"],
-        userId: json["user_id"],
+        // id: json["id"],
+        // userId: json["user_id"],
+
+        id: json["id"] != null
+            ? int.tryParse(json["id"].toString())
+            : null, // Konversi dari String ke int
+        userId: json["user_id"] != null
+            ? int.tryParse(json["user_id"].toString())
+            : null, // Konversi dari String ke int
+
         date: json["date"] == null ? null : DateTime.parse(json["date"]),
         timeIn: json["time_in"],
         timeOut: json["time_out"],

@@ -76,8 +76,17 @@ class _HistoryPageState extends State<HistoryPage> {
                   );
                 },
                 loaded: (attendance) {
-                  // Ambil data pertama dari list (atau ubah logika sesuai kebutuhan Anda)
+                  // Ambil data pertama dari list (atau ubah logika sesuai kebutuhan)
                   // final attendance = attendanceList.first;
+
+                  // Jika latlongIn atau latlongOut null, tampilkan UI yang sesuai
+                  if (attendance.latlongIn == null ||
+                      attendance.latlongOut == null) {
+                    return const Center(
+                      child: Text(
+                          'Silahkan Absensi Masuk dan Pulang Terlebih dahulu.'),
+                    );
+                  }
 
                   // Pisahkan latlongIn menjadi latitude dan longitude
                   final latlongInParts = attendance.latlongIn!.split(',');

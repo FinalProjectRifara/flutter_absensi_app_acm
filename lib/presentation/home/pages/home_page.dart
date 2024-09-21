@@ -301,6 +301,18 @@ class _HomePageState extends State<HomePage> {
                                   return;
                                 }
 
+                                // Cek apakah wajah sudah terdaftar
+                                if (faceEmbedding == null) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content:
+                                          Text('Anda belum mendaftarkan wajah'),
+                                      backgroundColor: AppColors.red,
+                                    ),
+                                  );
+                                  return;
+                                }
+
                                 if (isCheckin) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(

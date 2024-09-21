@@ -123,22 +123,33 @@ class _AttendanceCheckoutPageState extends State<AttendanceCheckoutPage> {
 
       // Perbarui status wajah dan pesan teks berdasarkan hasil pengenalan
       if (isValid) {
-        setState(() {
-          isFaceRegistered = true;
-          faceStatusMessage = 'Wajah sudah terdaftar';
-        });
+        if (mounted) {
+          setState(() {
+            isFaceRegistered = true;
+            faceStatusMessage = 'Wajah sudah terdaftar';
+          });
+        }
       } else {
-        setState(() {
-          isFaceRegistered = false;
-          faceStatusMessage = 'Wajah belum terdaftar';
-        });
+        if (mounted) {
+          setState(() {
+            isFaceRegistered = false;
+            faceStatusMessage = 'Wajah belum terdaftar';
+          });
+        }
       }
     }
 
-    setState(() {
-      isBusy = false;
-      _scanResults = recognitions;
-    });
+    if (mounted) {
+      setState(() {
+        isBusy = false;
+        _scanResults = recognitions;
+      });
+    }
+
+    // setState(() {
+    //   isBusy = false;
+    //   _scanResults = recognitions;
+    // });
   }
 
   //ketika absen authdata->face_embedding compare dengan yang dari tflite.
@@ -237,9 +248,17 @@ class _AttendanceCheckoutPageState extends State<AttendanceCheckoutPage> {
       description = _availableCameras![0];
     }
     await _controller!.stopImageStream();
-    setState(() {
-      _controller;
-    });
+    await _controller?.dispose();
+    if (mounted) {
+      setState(() {
+        _controller;
+      });
+    }
+
+    // setState(() {
+    //   _controller;
+    // });
+
     // Inisialisasi kamera dengan deskripsi kamera baru
     _initializeCamera();
   }
@@ -321,9 +340,22 @@ class _AttendanceCheckoutPageState extends State<AttendanceCheckoutPage> {
               left: 0.0,
               width: size.width,
               height: size.height,
-              child: AspectRatio(
-                aspectRatio: _controller!.value.aspectRatio,
-                child: CameraPreview(_controller!),
+              child:
+                  // AspectRatio(
+                  //   aspectRatio: _controller!.value.aspectRatio,
+                  //   child: CameraPreview(_controller!),
+                  // ),
+
+                  AspectRatio(
+                aspectRatio: _controller != null &&
+                        _controller!.value.isInitialized
+                    ? _controller!.value.aspectRatio
+                    : 1.0, // Berikan nilai default jika _controller belum diinisialisasi
+                child: _controller != null && _controller!.value.isInitialized
+                    ? CameraPreview(_controller!)
+                    : const Center(
+                        child:
+                            CircularProgressIndicator()), // Tampilkan loading jika kamera belum siap
               ),
             ),
             Positioned(
@@ -389,10 +421,11 @@ class _AttendanceCheckoutPageState extends State<AttendanceCheckoutPage> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              context.push(LocationPage(
-                                latitude: latitude,
-                                longitude: longitude,
-                              ));
+                              // Ke Maps Masih Belum
+                              // context.push(LocationPage(
+                              //   latitude: latitude,
+                              //   longitude: longitude,
+                              // ));
                             },
                             child:
                                 Assets.images.seeLocation.image(height: 30.0),
