@@ -36,7 +36,9 @@ extension DateTimeExt on DateTime {
   String toFormattedTime() {
     String hour = this.hour.toString().padLeft(2, '0');
     String minute = this.minute.toString().padLeft(2, '0');
+    String second = this.second.toString().padLeft(2, '0');  // Tambahkan detik
 
-    return '$hour:$minute WIB';
+    // return '$hour:$minute WIB';
+    return '$hour:$minute:$second WIB';  // Format waktu dengan detik
   }
 }

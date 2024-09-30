@@ -31,7 +31,7 @@ class AttendanceSuccessPage extends StatelessWidget {
             const SpaceHeight(8.0),
             Center(
               child: Text(
-                'Anda telah melakukan Absensi $status Pukul ${DateTime.now().toFormattedTime()}. Selamat bekerja ',
+                'Anda telah melakukan Absensi $status Pukul ${DateTime.now().toFormattedTime()}. Selamat $status ',
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 15.0,

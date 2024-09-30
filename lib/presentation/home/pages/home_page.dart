@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -28,13 +30,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String? faceEmbedding;
+  late Timer _timer; // Tambahkan variabel timer
+  late DateTime _currentTime; // Variabel untuk menyimpan waktu saat ini
 
   @override
   void initState() {
+    _currentTime = DateTime.now(); // Inisialisasi waktu sekarang
     _initializeFaceEmbedding();
     context.read<IsCheckedInBloc>().add(const IsCheckedInEvent.isCheckedIn());
     context.read<GetCompanyBloc>().add(const GetCompanyEvent.getCompany());
     getCurrentPosition();
+
+    // Timer untuk memperbarui waktu setiap detik
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        _currentTime = DateTime.now(); // Update waktu sekarang
+      });
+    });
+
     super.initState();
   }
 
@@ -95,6 +108,12 @@ class _HomePageState extends State<HomePage> {
         faceEmbedding = null; // Atur faceEmbedding ke null jika ada kesalahan
       });
     }
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel(); // Jangan lupa untuk membatalkan timer saat widget dihapus
+    super.dispose();
   }
 
   @override
@@ -180,7 +199,8 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     // Time
                     Text(
-                      DateTime.now().toFormattedTime(),
+                      _currentTime.toFormattedTime(),
+                      // DateTime.now().toFormattedTime(),
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 32.0,
@@ -190,7 +210,8 @@ class _HomePageState extends State<HomePage> {
 
                     // Date
                     Text(
-                      DateTime.now().toFormattedDate(),
+                      // DateTime.now().toFormattedDate(),
+                      _currentTime.toFormattedDate(),
                       style: const TextStyle(
                         color: AppColors.grey,
                         fontSize: 12.0,

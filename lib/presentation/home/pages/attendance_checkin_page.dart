@@ -438,6 +438,7 @@ class _AttendanceCheckinPageState extends State<AttendanceCheckinPage> {
                           icon: Assets.icons.reverse.svg(width: 48.0),
                         ),
                         const Spacer(),
+                        
                         BlocConsumer<CheckInBloc, CheckInState>(
                           listener: (context, state) {
                             state.maybeWhen(

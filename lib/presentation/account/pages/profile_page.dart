@@ -122,7 +122,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: CircularProgressIndicator(),
                 ),
                 error: (message) => Center(
-                  child: Text('Error: ' + message),
+                  child: Text('Error: $message'),
                 ),
               );
             },
