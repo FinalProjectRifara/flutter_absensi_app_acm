@@ -126,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () async {
                           log('Gagal akan mengembalikan widget semula');
                           // context.pushReplacement(const MainPage());
+
                           context.read<LoginBloc>().add(
                                 LoginEvent.login(
                                   emailController.text,
